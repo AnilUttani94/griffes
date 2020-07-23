@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="app.css" />
+
+    <style>
+      td,
+      th {
+        padding: 0;
+        font-size: 16px;
+      }
+      b,
+      strong {
+        font-weight: 700;
+        color: #385fb6;
+      }
+      div.pageWrap {
+        background-color: #fff;
+        margin: 0 auto 30px;
+        width: 66.2em;
+      }
+      #main {
+        background: white;
+      }
+      h1.entryPage {
+        font-weight: 700;
+      }
+      .accordion .accordion-header {
+        padding: 0.73326em 1em 0.6666em;
+        background-color: #efefef;
+        cursor: pointer;
+        transition: 0.25s;
+      }
+      ul#epoBreadcrumbs {
+        font-size: 13px;
+        margin: 0 0 11px -0.09em;
+        list-style: none;
+        padding: 0;
+      }
+      #epoBreadcrumbs li {
+        color: #0e2034;
+        padding-left: 5px;
+        display: inline-block;
+        line-height: 25px;
+        padding-right: 14px;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src="../logo-2.png"/></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <a href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li><a href="#">Searching for patents</a></li>
+            <li><a href="#">Technical information</a></li>
+            <li><a href="#">Legal information</a></li>
+            <li><a href="#">Business information</a></li>
+            <li class="dropdown">
+              <a
+                href="#"
+                class="dropdown-toggle"
+                data-toggle="dropdown"
+                role="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >About us</a
+              >
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a
+                href="#"
+                class="dropdown-toggle"
+                data-toggle="dropdown"
+                role="button"
+                aria-haspopup="true"
+                aria-expanded="true"
+                ><i
+                  class="fa fa-bell"
+                  style="font-size: 26px;"
+                  aria-hidden="true"
+                ></i>
+                <span class="badge">3</span></a
+              >
+              <ul class="dropdown-menu notify-drop">
+                <div class="notify-drop-title">
+                  <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                      Unread (<b>3</b>)
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-6 text-right">
+                      <a
+                        href=""
+                        class="rIcon allRead"
+                        data-tooltip="tooltip"
+                        data-placement="bottom"
+                        title=""
+                        data-original-title="tümü okundu."
+                        ><i class="fa fa-dot-circle-o"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+                <!-- end notify title -->
+                <!-- notify content -->
+                <div class="drop-content">
+                  <li>
+                    <div class="col-md-3 col-sm-3 col-xs-3">
+                      <div class="notify-img">
+                        <i
+                          class="fa fa-industry"
+                          style="font-size: 30px;position: relative;display: inline-block;vertical-align: middle;top: 20px;"
+                          aria-hidden="true"
+                        ></i>
+                      </div>
+                    </div>
+                    <div class="col-md-9 col-sm-9 col-xs-9 pd-l0">
+                      <p class="description">
+                        This is Demo notification Description and it must be in
+                        Bold
+                      </p>
+                      <p class="time">4 Days Ago</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="col-md-3 col-sm-3 col-xs-3">
+                      <div class="notify-img">
+                        <i
+                          class="fa fa-industry"
+                          style="font-size: 30px;position: relative;display: inline-block;vertical-align: middle;top: 20px;"
+                          aria-hidden="true"
+                        ></i>
+                      </div>
+                    </div>
+                    <div class="col-md-9 col-sm-9 col-xs-9 pd-l0">
+                      <p class="description">
+                        This is Demo notification Description and it must be in
+                        Bold
+                      </p>
+                      <p class="time">4 Days Ago</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="col-md-3 col-sm-3 col-xs-3">
+                      <div class="notify-img">
+                        <i
+                          class="fa fa-industry"
+                          style="font-size: 30px;position: relative;display: inline-block;vertical-align: middle;top: 20px;"
+                          aria-hidden="true"
+                        ></i>
+                      </div>
+                    </div>
+                    <div class="col-md-9 col-sm-9 col-xs-9 pd-l0">
+                      <p class="description">
+                        This is Demo notification Description and it must be in
+                        Bold
+                      </p>
+                      <p class="time">4 Days Ago</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="col-md-3 col-sm-3 col-xs-3">
+                      <div class="notify-img">
+                        <i
+                          class="fa fa-industry"
+                          style="font-size: 30px;position: relative;display: inline-block;vertical-align: middle;top: 20px;"
+                          aria-hidden="true"
+                        ></i>
+                      </div>
+                    </div>
+                    <div class="col-md-9 col-sm-9 col-xs-9 pd-l0">
+                      <p class="description">
+                        This is Demo notification Description and it must be in
+                        Bold
+                      </p>
+                      <p class="time">4 Days Ago</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="col-md-3 col-sm-3 col-xs-3">
+                      <div class="notify-img">
+                        <i
+                          class="fa fa-industry"
+                          style="font-size: 30px;position: relative;display: inline-block;vertical-align: middle;top: 20px;"
+                          aria-hidden="true"
+                        ></i>
+                      </div>
+                    </div>
+                    <div class="col-md-9 col-sm-9 col-xs-9 pd-l0">
+                      <p class="description">
+                        This is Demo notification Description and it must be in
+                        Bold
+                      </p>
+                      <p class="time">4 Days Ago</p>
+                    </div>
+                  </li>
+                </div>
+                <div class="notify-drop-footer text-center">
+                  <a href=""><i class="fa fa-eye"></i> View More </a>
+                </div>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a
+                href="#"
+                class="dropdown-toggle"
+                data-toggle="dropdown"
+                role="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+                style="padding-top: 0px;
+              padding-bottom: 0px;"
+                ><i
+                  class="fa fa-user"
+                  style="font-size: 30px;background: #385fb6;padding-top: 10px;border-radius: 50%;padding-bottom: 10px;padding-right: 15px;padding-left: 15px;color: #fff;"
+                ></i>
+                <span class="caret"></span
+              ></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+    <main id="main" class="search-container">
+      <div class="col-md-12">
+        <ul class="clearfix" id="epoBreadcrumbs">
+          <li class="firstChild">
+            <a href="../index.html">Home</a> <strong>></strong>
+          </li>
+          <li>My folders/Alerts</li>
+        </ul>
+        <div class="row">
+          <div class="col-xs-12">
+            <h1 class="entryPage">My folders/Alerts <br /><br /></h1>
+            <h6 class="entryPage">Total : 3 <br /></h6>
+          </div>
+          <div class="col-xs-3"></div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="ais-SortBy ">
+              <select class="ais-SortBy-select">
+                <option
+                  class="ais-SortBy-option"
+                  value="instant_search_price_asc"
+                  >Actions</option
+                >
+                <option
+                  class="ais-SortBy-option"
+                  value="instant_search_price_asc"
+                  >Delete</option
+                >
+                <option
+                  class="ais-SortBy-option"
+                  value="instant_search_price_desc"
+                  >Share</option
+                >
+              </select>
+            </div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Creation date</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Search parameter</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row"><input type="checkbox" /></th>
+                  <td>2020/07/22</td>
+                  <td>Watches</td>
+                  <td>Alert</td>
+                  <td>
+                    <b>Register:</b> EPO <br /><b>Applicants:</b> CITIZEN WATCH
+                    CO LTD<br />
+                    <b>IPC:</b> A44C5/00
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row"><input type="checkbox" /></th>
+                  <td>2020/07/22</td>
+                  <td>Watches</td>
+                  <td>Folder</td>
+                  <td>
+                    <b>Register:</b> EPO <br /><b>Applicants:</b> CITIZEN WATCH
+                    CO LTD<br />
+                    <b>IPC:</b> A44C5/00
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row"><input type="checkbox" /></th>
+                  <td>2020/07/22</td>
+                  <td>Watches</td>
+                  <td>Alert</td>
+                  <td>
+                    <b>Register:</b> EPO <br /><b>Applicants:</b> CITIZEN WATCH
+                    CO LTD<br />
+                    <b>IPC:</b> A44C5/00
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-xs-3"></div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
